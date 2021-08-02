@@ -9,8 +9,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @ComponentScan("com.skillUp.*")
-@EntityScan("com.skillUp.user")
-@EnableJpaRepositories("com.skillUp.user")
+@EntityScan({"com.skillUp.user","com.skillUp.beans"})
+@EnableJpaRepositories({"com.skillUp.user","com.skillUp.beans"})
 public class MyRestServiceApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MyRestServiceApplication.class, args);
